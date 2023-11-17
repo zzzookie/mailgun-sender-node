@@ -1,3 +1,4 @@
+const { DEFAULT_FILE_NAME } = process.env;
 const commander = require('commander');
 
 function readClArgs() {
@@ -12,7 +13,12 @@ function readClArgs() {
     process.exit(1);
   }
 
-  return args;
+  let fileName = args.maillist || `./${DEFAULT_FILE_NAME || 'maillist'}.csv`;
+  if (!fileName.endsWith('.csv')) {
+    fileName += '.csv';
+  }
+
+  return { fileName, campaignName: args.campaign.trim() };
 }
 
 module.exports = readClArgs;
