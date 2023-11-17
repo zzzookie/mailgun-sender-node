@@ -14,9 +14,9 @@ or
 ```node app.js -camp <mailgun_template_name> -ml <maillist_file_path>```
 
 ### Parameters
-```-camp``` or ```--campaign``` **(required)** - Mailgun template name in the database.
+```-camp``` or ```--campaign``` **(required)** — Mailgun template name in the database.
 
-```-ml``` or ```--maillist``` (optional) - Path to a ```.csv``` file in the following format:
+```-ml``` or ```--maillist``` (optional) — Path to a ```.csv``` file in the following format:
 
     name,email,lang,ext_id
     "Client One",example@mail.com,en,d7DfCaF
